@@ -10,8 +10,8 @@ fun main() {
     val hourOnWay: Int = minutesRun / COUNT_MINUTES_SECONDS
     val minutesOnWay = minutesRun - hourOnWay * COUNT_MINUTES_SECONDS
 
-    var hourArrival = hourStart + hourOnWay
-    var minuteArrival = minuteStart + minutesOnWay
+    var hourArrival: Int = hourStart + hourOnWay
+    var minuteArrival: Int = minuteStart + minutesOnWay
 
     if (minuteArrival >= COUNT_MINUTES_SECONDS) {
         hourArrival += minuteArrival / COUNT_MINUTES_SECONDS
