@@ -4,7 +4,6 @@ import kotlin.math.*
 
 const val PERCENT_DEPOSIT = 16.7
 const val COUNT_ACCRUALS_IN_YEAR = 1
-const val TOTAL_PERCENTS = 100
 const val FIXED_VALUE = 1
 
 fun main() {
