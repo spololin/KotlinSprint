@@ -1,10 +1,10 @@
 package org.example.lesson_4
 
-const val RUN_SHIP_DAMAGE = false
-const val RUN_SHIP_MIN_COUNT_CREW = 55
-const val RUN_SHIP_MAX_COUNT_CREW = 70
-const val RUN_SHIP_MIN_COUNT_BOXES_PROVISION = 50
-const val RUN_SHIP_FAVORABLE_WEATHER = true
+const val LAUNCH_CONDITION_WITH_DAMAGE = false
+const val LAUNCH_CONDITION_WITH_MIN_COUNT_CREW = 55
+const val LAUNCH_CONDITION_WITH_MAX_COUNT_CREW = 70
+const val LAUNCH_CONDITION_WITH_MIN_COUNT_BOXES_PROVISION = 50
+const val LAUNCH_CONDITION_WITH_FAVORABLE_WEATHER = true
 
 fun main() {
     val shipDamage = false
@@ -13,15 +13,15 @@ fun main() {
     val shipFavorableWeather = true
 
     val shipCanRun =
-        shipDamage == RUN_SHIP_DAMAGE
-                && shipCountCrew in RUN_SHIP_MIN_COUNT_CREW..RUN_SHIP_MAX_COUNT_CREW
-                && shipCountBoxesProvision > RUN_SHIP_MIN_COUNT_BOXES_PROVISION
-                && shipFavorableWeather == RUN_SHIP_FAVORABLE_WEATHER
+        shipDamage == LAUNCH_CONDITION_WITH_DAMAGE &&
+                shipCountCrew in LAUNCH_CONDITION_WITH_MIN_COUNT_CREW..LAUNCH_CONDITION_WITH_MAX_COUNT_CREW &&
+                shipCountBoxesProvision > LAUNCH_CONDITION_WITH_MIN_COUNT_BOXES_PROVISION &&
+                shipFavorableWeather == LAUNCH_CONDITION_WITH_FAVORABLE_WEATHER
 
     val shipCanRunAlternative =
-        shipCountCrew == RUN_SHIP_MAX_COUNT_CREW
-                && shipCountBoxesProvision >= RUN_SHIP_MIN_COUNT_BOXES_PROVISION
-                && shipFavorableWeather == RUN_SHIP_FAVORABLE_WEATHER
+        shipCountCrew == LAUNCH_CONDITION_WITH_MAX_COUNT_CREW &&
+                shipCountBoxesProvision >= LAUNCH_CONDITION_WITH_MIN_COUNT_BOXES_PROVISION &&
+                shipFavorableWeather == LAUNCH_CONDITION_WITH_FAVORABLE_WEATHER
 
     println("Корабль ${if (shipCanRun || shipCanRunAlternative) "может" else "не может"} отправиться в плавание")
 }
