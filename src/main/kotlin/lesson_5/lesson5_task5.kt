@@ -1,12 +1,9 @@
 package org.example.lesson_5
 
-import kotlin.random.Random
-
-
 fun main() {
-    val riddleNumber1 = Random.nextInt(0, 42)
-    val riddleNumber2 = Random.nextInt(0, 42)
-    val correctNumber3 = Random.nextInt(0, 42)
+    val riddleNumber1 = (0..42).random()
+    val riddleNumber2 = (0..42).random()
+    val correctNumber3 = (0..42).random()
     val riddleNumbers = listOf(riddleNumber1, riddleNumber2, correctNumber3)
 
     println("Please inter two number in range 0 to 42")
