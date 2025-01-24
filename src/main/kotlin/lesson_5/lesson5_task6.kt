@@ -15,7 +15,7 @@ fun main() {
     when {
         bodyMassIndex < 18.5 -> println("Недостаточная масса тела")
         bodyMassIndex < 25 -> println("Нормальная масса тела")
-        bodyMassIndex.toInt() in 25 until 30 -> println("Избыточная масса тела")
+        bodyMassIndex < 30 -> println("Избыточная масса тела")
         else -> println("Ожирение")
     }
 }
